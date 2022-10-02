@@ -253,11 +253,11 @@ async def lego(event):
     quew = event.pattern_match.group(1)
 
     if event.sender_id != OWNER_ID and not quew:
-        await event.reply("ᴘʟᴇᴀsᴇ ɢɪᴍᴍɪᴇ ᴀ ᴛᴇxᴛ ғᴏʀ ᴛʜᴇ ʟᴏɢᴏ.")
+        await event.reply("ᴛᴏʟᴏɴɢ ʙᴇʀɪ sᴀʏᴀ ᴛᴇᴋs ᴜɴᴛᴜᴋ ʟᴏɢᴏ.")
 
         return
 
-    pesan = await event.reply("ʟᴏɢᴏ ɪɴ ᴀ ᴘʀᴏᴄᴇss. ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ....")
+    pesan = await event.reply("ʟᴏɢᴏ sᴇᴅᴀɴɢ ᴅɪᴘʀᴏsᴇs. ᴛᴏʟᴏɴɢ ᴍᴇɴᴜɴɢɢᴜ....")
 
     try:
 
@@ -298,7 +298,7 @@ async def lego(event):
             (x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black"
         )
 
-        fname = "Exon.png"
+        fname = "somed.png"
 
         img.save(fname, "png")
 
