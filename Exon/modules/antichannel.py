@@ -47,15 +47,15 @@ def set_antichannel(update: Update, context: CallbackContext):
         s = args[0].lower()
         if s in ["yes", "on"]:
             enable_antichannel(chat.id)
-            message.reply_html(f"ᴇɴᴀʙʟᴇᴅ 𝗔𝗻𝘁𝗶𝗰𝗵𝗮𝗻𝗻𝗲𝗹 ɪɴ {html.escape(chat.title)}")
+            message.reply_html(f"ᴀᴋᴛɪꜰᴋᴀɴ 𝗔𝗻𝘁𝗶𝗰𝗵𝗮𝗻𝗻𝗲𝗹 ᴅɪ {html.escape(chat.title)}")
         elif s in ["off", "no"]:
             disable_antichannel(chat.id)
-            message.reply_html(f"ᴅɪsᴀʙʟᴇᴅ 𝗔𝗻𝘁𝗶𝗰𝗵𝗮𝗻𝗻𝗲𝗹 ɪɴ {html.escape(chat.title)}")
+            message.reply_html(f"ɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ 𝗔𝗻𝘁𝗶𝗰𝗵𝗮𝗻𝗻𝗲𝗹 ᴅɪ {html.escape(chat.title)}")
         else:
-            message.reply_text(f"ᴜɴʀᴇᴄᴏɢɴɪᴢᴇᴅ ᴀʀɢᴜᴍᴇɴᴛs {s}")
+            message.reply_text(f"ᴀʀɢᴜᴍᴇɴ ᴛɪᴅᴀᴋ ᴅɪᴋᴇɴᴀʟ {s}")
         return
     message.reply_html(
-        f"ᴀɴᴛɪᴄʜᴀɴɴᴇʟ sᴇᴛᴛɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ {antichannel_status(chat.id)} ɪɴ {html.escape(chat.title)}"
+        f"ᴀɴᴛɪᴄʜᴀɴɴᴇʟ ᴘᴇɴɢᴀᴛᴜʀᴀɴ sᴀᴀᴛ ɪɴɪ {antichannel_status(chat.id)} ɪɴ {html.escape(chat.title)}"
     )
 
 
@@ -82,17 +82,15 @@ __help__ = """
  
         ⚠️ ᴡᴀʀɴɪɴɢ ⚠️
  
-ɪғ ʏᴏᴜ ᴜsᴇ ᴛʜɪs ᴍᴏᴅᴇ, ᴛʜᴇ ʀᴇsᴜʟᴛ ɪs, ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ, ʏᴏᴜ ᴄᴀɴ'ᴛ ᴄʜᴀᴛ ᴜsɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ғᴏʀ ғᴏʀᴇᴠᴇʀ ɪғ ʏᴏᴜ ɢᴇᴛ ʙᴀɴɴᴇᴅ ᴏɴᴄᴇ,
-ᴀɴᴛɪ ᴄʜᴀɴɴᴇʟ ᴍᴏᴅᴇ ɪs ᴀ ᴍᴏᴅᴇ ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʙᴀɴ ᴜsᴇʀs ᴡʜᴏ ᴄʜᴀᴛ ᴜsɪɴɢ ᴄʜᴀɴɴᴇʟs. 
-ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜsᴇᴅ ʙʏ ᴀᴅᴍɪɴs.
+ᴊɪᴋᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ᴍᴏᴅᴇ ɪɴɪ, ʜᴀsɪʟɴʏᴀ ᴀᴅᴀʟᴀʜ, ᴅɪ ɢʀᴜᴘ, ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴍᴇɴɢᴏʙʀᴏʟ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ sᴀʟᴜʀᴀɴ ᴜɴᴛᴜᴋ sᴇʟᴀᴍᴀɴʏᴀ ᴊɪᴋᴀ ᴀɴᴅᴀ ᴅɪʙʟᴏᴋɪʀ sᴀᴛᴜ ᴋᴀʟɪ, ᴍᴏᴅᴇ ᴀɴᴛɪ sᴀʟᴜʀᴀɴ ᴀᴅᴀʟᴀʜ ᴍᴏᴅᴇ ᴜɴᴛᴜᴋ sᴇᴄᴀʀᴀ ᴏᴛᴏᴍᴀᴛɪs ᴍᴇʟᴀʀᴀɴɢ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴍᴇɴɢᴏʙʀᴏʟ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ sᴀʟᴜʀᴀɴ. ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴʏᴀ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴏʟᴇʜ ᴀᴅᴍɪɴ.
 
-/antichannelmode <'ᴏɴ/'ʏᴇs> : `ᴇɴᴀʙʟᴇs ᴀɴᴛɪ-ᴄʜᴀɴɴᴇʟ ᴍᴏᴅᴇ ʙᴀɴ`
+/antichannelmode <'ᴏɴ/'ʏᴇs> : `mengaktifkan larangan mode anti-saluran`
 
-/antichannelmode <'ᴏғғ/'ɴᴏ> : `ᴅɪsᴀʙʟᴇᴅ ᴀɴᴛɪ-ᴄʜᴀɴɴᴇʟ ᴍᴏᴅᴇ ʙᴀɴ`
+/antichannelmode <'ᴏғғ/'ɴᴏ> : `ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ larangan mode anti-saluran`
 
-/cleanlinked on  :  `ᴇɴᴀʙʟᴇs ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ`
+/cleanlinked on  :  `mengaktifkan ᴛᴀᴜᴛᴀɴ saluran`
  
 /antichannelpin on  : `ᴀɴᴛɪ-ᴄʜᴀɴɴᴇʟ ᴘɪɴ ᴍᴏᴅᴇ`
 
-/antiservice <'ᴏɴ/'ᴏғғ> : `ᴅᴇʟᴇᴛᴇ sᴇʀᴠɪᴄᴇ ᴍsɢ. `
+/antiservice <'ᴏɴ/'ᴏғғ> : `ʜᴀᴘᴜs ᴘᴇsᴀɴ ʟᴀʏᴀɴᴀɴ. `
 """
