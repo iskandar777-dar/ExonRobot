@@ -98,17 +98,17 @@ def check_flood(update, context) -> str:
             tag = "TMUTE"
         send_message(
             update.effective_message,
-            f"ᴡᴀɴɴᴀ sᴘᴀᴍ?! sᴏʀʀʏ ɪᴛ's ɴᴏᴛ ʏᴏᴜʀ ʜᴏᴜsᴇ ᴍᴀɴ!\n{execstrings}!",
+            f"ᴍᴀᴜ sᴘᴀᴍ ?, ᴍᴀᴀꜰ ɪᴛᴜ ʙᴜᴋᴀɴ ʀᴜᴍᴀʜᴍᴜ ᴋᴀᴡᴀɴ!\n{execstrings}!",
         )
 
-        return f"<b>{html.escape(chat.title)}:</b>\n#{tag}\n<b>User:</b> {mention_html(user.id, user.first_name)}\nғʟᴏᴏᴅᴇᴅ ᴛʜᴇ ɢʀᴏᴜᴘ."
+        return f"<b>{html.escape(chat.title)}:</b>\n#{tag}\n<b>User:</b> {mention_html(user.id, user.first_name)}\nᴍᴇᴍʙᴀɴᴊɪʀɪ ɢʀᴜᴘ."
 
     except BadRequest:
         msg.reply_text(
-            "I ᴄᴀɴ'ᴛ ʀᴇsᴛʀɪᴄᴛ ᴘᴇᴏᴘʟᴇ ʜᴇʀᴇ, ɢɪᴠᴇ ᴍᴇ ᴘᴇʀᴍɪssɪᴏɴs ғɪʀsᴛ! ᴜɴᴛɪʟ ᴛʜᴇɴ, ɪ'ʟʟ ᴅɪsᴀʙʟᴇ ᴀɴᴛɪ-ғʟᴏᴏᴅ."
+            "sᴀʏᴀ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴍᴇᴍʙᴀᴛᴀsɪ ᴏʀᴀɴɢ ᴅɪ sɪɴɪ, ʙᴇʀɪ sᴀʏᴀ ɪᴢɪɴ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ, sᴀᴍᴘᴀɪ sᴀᴀᴛ ɪᴛᴜ sᴀʏᴀ ᴀᴋᴀɴ ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ᴀɴᴛɪ-ʙᴀɴᴊɪʀ."
         )
         sql.set_flood(chat.id, 0)
-        return f"<b>{chat.title}:</b>\n#INFO\nᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ʀᴇsᴛʀɪᴄᴛ ᴜsᴇʀs sᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅɪsᴀʙʟᴇᴅ ᴀɴᴛɪ-ғʟᴏᴏᴅ"
+        return f"<b>{chat.title}:</b>\n#INFO\nᴛɪᴅᴀᴋ ᴍᴇᴍɪʟɪᴋɪ ɪᴢɪɴ ʏᴀɴɢ ᴄᴜᴋᴜᴘ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀᴛᴀsɪ ᴘᴇɴɢɢᴜɴᴀ, ᴊᴀᴅɪ ɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ᴀɴᴛɪ-ʙᴀɴᴊɪʀ sᴇᴄᴀʀᴀ ᴏᴛᴏᴍᴀᴛɪs"
 
 
 @user_admin
@@ -128,7 +128,7 @@ def set_flood(update, context) -> str:
         if update.effective_message.chat.type == "private":
             send_message(
                 update.effective_message,
-                "ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴍᴇᴀɴᴛ ᴛᴏ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘ ɴᴏᴛ ɪɴ PM",
+                "ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ᴅɪᴍᴀᴋsᴜᴅᴋᴀɴ ᴜɴᴛᴜᴋ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅᴀʟᴀᴍ ɢʀᴜᴘ ʙᴜᴋᴀɴ ᴅɪ ᴘᴍ",
             )
             return ""
         chat_id = update.effective_chat.id
@@ -140,7 +140,7 @@ def set_flood(update, context) -> str:
             sql.set_flood(chat_id, 0)
             if conn:
                 text = message.reply_text(
-                    f"ᴀɴᴛɪғʟᴏᴏᴅ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀʙʟᴇᴅ ɪɴ {chat_name}."
+                    f"ᴀɴᴛɪꜰʟᴏᴏᴅ ᴛᴇʟᴀʜ ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ʟᴇʙᴀʜ ᴅɪ {chat_name}."
                 )
             else:
                 text = message.reply_text("ᴀɴᴛɪғʟᴏᴏᴅ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀʙʟᴇᴅ.")
@@ -152,38 +152,38 @@ def set_flood(update, context) -> str:
                 sql.set_flood(chat_id, 0)
                 if conn:
                     text = message.reply_text(
-                        f"ᴀɴᴛɪғʟᴏᴏᴅ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀʙʟᴇᴅ ɪɴ {chat_name}."
+                        f"ᴀɴᴛɪꜰʟᴏᴏᴅ ᴛᴇʟᴀʜ ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ʟᴇʙᴀʜ ᴅɪ {chat_name}."
                     )
                 else:
                     text = message.reply_text("ᴀɴᴛɪғʟᴏᴏᴅ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀʙʟᴇᴅ.")
-                return f"<b>{html.escape(chat_name)}:</b>\n#sᴇᴛғʟᴏᴏᴅ\n<b>Admin:</b> {mention_html(user.id, user.first_name)}\nᴅɪsᴀʙʟᴇ ᴀɴᴛɪғʟᴏᴏᴅ."
+                return f"<b>{html.escape(chat_name)}:</b>\n#sᴇᴛғʟᴏᴏᴅ\n<b>Admin:</b> {mention_html(user.id, user.first_name)}\nᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ᴀɴᴛɪꜰʟᴏᴏᴅ."
 
             if amount < 3:
                 send_message(
                     update.effective_message,
-                    "ᴀɴᴛɪғʟᴏᴏᴅ ᴍᴜsᴛ ʙᴇ ᴇɪᴛʜᴇʀ 0 (disabled) ᴏʀ ɴᴜᴍʙᴇʀ ɢʀᴇᴀᴛᴇʀ ᴛʜᴀɴ 3!",
+                    "ᴀɴᴛɪꜰʟᴏᴏᴅ ʜᴀʀᴜs sᴀʟᴀʜ sᴀᴛᴜ 0 (ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ) ᴀᴛᴀᴜ ᴀɴɢᴋᴀɴʏᴀ ʟᴇʙɪʜ ʙᴇsᴀʀ ᴅᴀʀɪ 3!",
                 )
                 return ""
             sql.set_flood(chat_id, amount)
             if conn:
                 text = message.reply_text(
-                    f"ᴀɴᴛɪ-ғʟᴏᴏᴅ ʜᴀs ʙᴇᴇɴ sᴇᴛ ᴛᴏ {amount} ɪɴ ᴄʜᴀᴛ: {chat_name}"
+                    f"ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ᴛᴇʟᴀʜ ᴅɪᴀᴛᴜʀ ᴋᴇ {amount} ᴅɪ ɢʀᴜᴘ: {chat_name}"
                 )
 
             else:
                 text = message.reply_text(
-                    f"sᴜᴄᴄᴇssғᴜʟʟʏ ᴜᴘᴅᴀᴛᴇᴅ ᴀɴᴛɪ-ғʟᴏᴏᴅ ʟɪᴍɪᴛ ᴛᴏ {amount}!"
+                    f"ʙᴇʀʜᴀsɪʟ ᴍᴇᴍᴘᴇʀʙᴀʀᴜɪ ʙᴀᴛᴀs ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ᴋᴇ {amount}!"
                 )
 
             send_message(update.effective_message, text, parse_mode="markdown")
             return f"<b>{html.escape(chat_name)}:</b>\n#SETFLOOD\n<b>Admin:</b> {mention_html(user.id, user.first_name)}\nSet antiflood to <code>{amount}</code>."
 
         else:
-            message.reply_text("ɪɴᴠᴀʟɪᴅ ᴀʀɢᴜᴍᴇɴᴛ ᴘʟᴇᴀsᴇ ᴜsᴇ ᴀ ɴᴜᴍʙᴇʀ, 'off' ᴏʀ 'no'")
+            message.reply_text("argumen tidak valid silakan gunakan nomor, 'off' ᴏʀ 'no'")
     else:
         message.reply_text(
             (
-                "ᴜsᴇ `/setflood ɴᴜᴍʙᴇʀ` ᴛᴏ ᴇɴᴀʙʟᴇ ᴀɴᴛɪ-ғʟᴏᴏᴅ.\nᴏʀ ᴜsᴇ `/setflood off` ᴛᴏ ᴅɪsᴀʙʟᴇ ᴀɴᴛɪғʟᴏᴏᴅ!."
+                "ᴜsᴇ `/setflood ɴᴏᴍᴏʀ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀᴋᴛɪꜰᴋᴀɴ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ.\nᴀᴛᴀᴜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ `/setflood off` ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ᴀɴᴛɪꜰʟᴏᴏᴅ!."
             ),
             parse_mode="markdown",
         )
@@ -213,19 +213,19 @@ def flood(update, context):
     limit = sql.get_flood_limit(chat_id)
     if limit == 0:
         text = (
-            msg.reply_text(f"I'ᴍ ɴᴏᴛ ᴇɴғᴏʀᴄɪɴɢ ᴀɴʏ ғʟᴏᴏᴅ ᴄᴏɴᴛʀᴏʟ ɪɴ {chat_name}!")
+            msg.reply_text(f"sᴀʏᴀ ᴛɪᴅᴀᴋ ᴍᴇᴍʙᴇʀʟᴀᴋᴜᴋᴀɴ ᴀɴᴛɪꜰʟᴏᴏᴅ ᴘᴀᴅᴀ {chat_name}!")
             if conn
-            else msg.reply_text("I'm ɴᴏᴛ ᴇɴғᴏʀᴄɪɴɢ ᴀɴʏ ғʟᴏᴏᴅ ᴄᴏɴᴛʀᴏʟ ʜᴇʀᴇ!")
+            else msg.reply_text("sᴀʏᴀ ᴛɪᴅᴀᴋ ᴍᴇɴᴇʀᴀᴘᴋᴀɴ ᴋᴏɴᴛʀᴏʟ ᴀɴᴛɪꜰʟᴏᴏᴅ ᴅɪ sɪɴɪ!")
         )
 
     elif conn:
         text = msg.reply_text(
-            f"I'ᴍ ᴄᴜʀʀᴇɴᴛʟʏ restricting ᴍᴇᴍʙᴇʀs ᴀғᴛᴇʀ {limit} ᴄᴏɴsᴇᴄᴜᴛɪᴠᴇ ᴍᴇssᴀɢᴇs ɪɴ {chat_name}."
+            f"sᴀʏᴀ ᴍᴇᴍʙᴀᴛᴀsɪ {ʟɪᴍɪᴛ} sᴇᴄᴜᴛꞮᴠᴇ sᴀɢᴇs sᴀᴀᴛ ɪɴɪ sᴀʏᴀ ᴍᴇᴍʙᴀᴛᴀsɪ ᴀɴɢɢᴏᴛᴀ sᴇᴛᴇʟᴀʜ {ʟɪᴍɪᴛ} ᴘᴇsᴀɴ ʙᴇʀᴛᴜʀᴜᴛ-ᴛᴜʀᴜᴛ ᴅɪ {chat_name}."
         )
 
     else:
         text = msg.reply_text(
-            f"I'm ᴄᴜʀʀᴇɴᴛʟʏ ʀᴇsᴛʀɪᴄᴛɪɴɢ ᴍᴇᴍʙᴇʀs ᴀғᴛᴇʀ {limit} ᴄᴏɴsᴇᴄᴜᴛɪᴠᴇ ᴍᴇssᴀɢᴇs."
+            f"sᴀʏᴀ ᴍᴇᴍʙᴀᴛᴀsɪ {ʟɪᴍɪᴛ} sᴇᴄᴜᴛꞮᴠᴇ sᴀɢᴇs sᴀᴀᴛ ɪɴɪ sᴀʏᴀ ᴍᴇᴍʙᴀᴛᴀsɪ ᴀɴɢɢᴏᴛᴀ sᴇᴛᴇʟᴀʜ {ʟɪᴍɪᴛ} ᴘᴇsᴀɴ."
         )
 
     send_message(update.effective_message, text, parse_mode="markdown")
@@ -249,7 +249,7 @@ def set_flood_mode(update, context):
         if update.effective_message.chat.type == "private":
             send_message(
                 update.effective_message,
-                "ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴍᴇᴀɴᴛ ᴛᴏ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘ ɴᴏᴛ ɪɴ PM",
+                "ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ᴅɪᴍᴀᴋsᴜᴅᴋᴀɴ ᴜɴᴛᴜᴋ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅᴀʟᴀᴍ ʀᴏᴜᴘ ʙᴜᴋᴀɴ ᴅɪ ᴘᴍ",
             )
             return ""
         chat = update.effective_chat
@@ -268,7 +268,7 @@ def set_flood_mode(update, context):
             sql.set_flood_strength(chat_id, 3, "0")
         elif args[0].lower() == "tban":
             if len(args) == 1:
-                teks = """ɪᴛ ʟᴏᴏᴋs ʟɪᴋᴇ ʏᴏᴜ ᴛʀɪᴇᴅ ᴛᴏ sᴇᴛ ᴛɪᴍᴇ ᴠᴀʟᴜᴇ ғᴏʀ ᴀɴᴛɪғʟᴏᴏᴅ ʙᴜᴛ ʏᴏᴜ ᴅɪᴅɴ'ᴛ sᴘᴇᴄɪғɪᴇᴅ ᴛɪᴍᴇ; ᴛʀʏ, `/setfloodmode tban <timevalue>`.
+                teks = """sᴇᴘᴇʀᴛɪɴʏᴀ ᴀɴᴅᴀ ʟᴇʟᴀʜ ᴍᴇɴɢᴀᴛᴜʀ ɴɪʟᴀɪ ᴛɪᴍʀ ᴜɴᴛᴜᴋ ᴀɴᴛɪꜰʟᴏᴏᴅ ᴛᴇᴛᴀᴘɪ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴍᴇɴᴇɴᴛᴜᴋᴀɴ ᴡᴀᴋᴛᴜ; ᴛʀʏ, `/setfloodmode tban <timevalue>`.
     ᴇxᴀᴍᴘʟᴇs ᴏғ ᴛɪᴍᴇ ᴠᴀʟᴜᴇ: 4ᴍ = 4 ᴍɪɴᴜᴛᴇs, 3h = 3 ʜᴏᴜʀs, 6d = 6 ᴅᴀʏs, 5w = 5 ᴡᴇᴇᴋs."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
                 return
@@ -313,12 +313,12 @@ def set_flood_mode(update, context):
         settypeflood = f"ᴛᴍᴜᴛᴇ ғᴏʀ {getvalue}"
     if conn:
         text = msg.reply_text(
-            f"sᴇɴᴅɪɴɢ ᴍᴏʀᴇ ᴍᴇssᴀɢᴇs ᴛʜᴀɴ ғʟᴏᴏᴅ ʟɪᴍɪᴛ ᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ {settypeflood} ɪɴ {chat_name}."
+            f"ᴘᴇsᴀɴ ᴅᴀʀɪ ʙᴀᴛᴀs ꜰʟᴏᴏᴅ ᴀᴋᴀɴ ᴍᴇɴɢᴀᴋɪʙᴀᴛᴋᴀɴ {settypeflood} ᴅᴀʟᴀᴍ {chat_name}."
         )
 
     else:
         text = msg.reply_text(
-            f"sᴇɴᴅɪɴɢ ᴍᴏʀᴇ ᴍᴇssᴀɢᴇ ᴛʜᴀɴ ғʟᴏᴏᴅ ʟɪᴍɪᴛ ᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ {settypeflood}."
+            f"ᴍᴇɴɢɪʀɪᴍ ʟᴇʙɪʜ ʙᴀɴʏᴀᴋ ᴍsᴇ ᴅᴀʀɪᴘᴀᴅᴀ ʙᴀᴛᴀs ʙᴀɴᴊɪʀ ᴀᴋᴀɴ ᴍᴇɴɢʜᴀsɪʟᴋᴀɴ {settypeflood}."
         )
 
     send_message(update.effective_message, text, parse_mode=ParseMode.MARKDOWN)
@@ -337,22 +337,21 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-*ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴛᴀᴋᴇ ᴀᴄᴛɪᴏɴ ᴏɴ ᴜsᴇʀs ᴛʜᴀᴛ sᴇɴᴅᴍᴏʀᴇᴛʜᴀɴ x ᴍᴇssᴀɢᴇs ɪɴ ᴀ ʀᴏᴡ. Exᴄᴇᴇᴅɪɴɢ ᴛʜᴇ sᴇᴛ ғʟᴏᴏᴅ \nᴡɪʟʟ ʀᴇsᴜʟᴛ ɪɴ ʀᴇsᴛʀɪᴄᴛɪɴɢ ᴛʜᴀᴛ ᴜsᴇʀ.
-Tʜɪs ᴡɪʟʟ ᴍᴜᴛᴇ ᴜsᴇʀs ɪғ ᴛʜᴇʏ sᴇɴᴅ ᴍᴏʀᴇ ᴛʜᴀɴ 5 ᴍᴇssᴀɢᴇs ɪɴ ᴀ ʀᴏᴡ, ʙᴏᴛs ᴀʀᴇ ɪɢɴᴏʀᴇᴅ.*
+*ᴍᴇᴍᴜɴɢᴋɪɴᴋᴀɴ ᴀɴᴅᴀ ᴍᴇɴɢᴀᴍʙɪʟ ᴛɪɴᴅᴀᴋᴀɴ ᴘᴀᴅᴀ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴍᴇɴɢɪʀɪᴍ ʟᴇʙɪʜ ᴅᴀʀɪ x ᴘᴇsᴀɴ ʙᴇʀᴛᴜʀᴜᴛ-ᴛᴜʀᴜᴛ. ᴍᴇʟᴇʙɪʜɪ ʙᴀɴᴊɪʀ ʏᴀɴɢ ᴅɪᴛᴇᴛᴀᴘᴋᴀɴ \nᴀᴋᴀɴ ᴍᴇɴɢᴀᴋɪʙᴀᴛᴋᴀɴ ᴘᴇᴍʙᴀᴛᴀsᴀɴ ᴘᴇɴɢɢᴜɴᴀ ᴛᴇʀsᴇʙᴜᴛ. ɪɴɪ ᴀᴋᴀɴ ᴍᴇ-ᴍɪᴜᴛᴇ ᴘᴇɴɢɢᴜɴᴀ ᴊɪᴋᴀ ᴍᴇʀᴇᴋᴀ ᴍᴇɴɢɪʀɪᴍ ʟᴇʙɪʜ ᴅᴀʀɪ 5 ᴘᴇsᴀɴ ʙᴇʀᴛᴜʀᴜᴛ-ᴛᴜʀᴜᴛ, ʙᴏᴛ, ᴅɪᴀʙᴀɪᴋᴀɴ.*
 
-➥ /flood *:* `Gᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ғʟᴏᴏᴅ ᴄᴏɴᴛʀᴏʟ sᴇᴛᴛɪɴɢ`
+➥ /flood *:* `ᴅᴀᴘᴀᴛᴋᴀɴ ᴘᴇɴɢᴇɴᴅᴀʟɪᴀɴ ꜰʟᴏᴏᴅ sᴀᴀᴛ ɪɴɪ`
 
- • *ᴀᴅᴍɪɴs ᴏɴʟʏ:*
+ • *ʜᴀɴʏᴀ ᴀᴅᴍɪɴ:*
  
-➥ /setflood <`ɪɴᴛ`/'ᴏɴ'/'ᴏғғ'>*:* `ᴇɴᴀʙʟᴇs ᴏʀ ᴅɪsᴀʙʟᴇs ғʟᴏᴏᴅ ᴄᴏɴᴛʀᴏʟ`
-   ᴇxᴀᴍᴘʟᴇ *:* `/setflood 5`
+➥ /setflood <`ɪɴᴛ`/'ᴏɴ'/'ᴏғғ'>*:* `ᴍᴇɴɢᴀᴋᴛɪꜰᴋᴀɴ ᴀᴛᴀᴜ ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ꜰʟᴏᴏᴅ`
+   ᴄᴏɴᴛᴏʜ *:* `/setflood 5`
      
-➥ /setfloodmode <ʙᴀɴ/ᴋɪᴄᴋ/ᴍᴜᴛᴇ/ᴛʙᴀɴ/ᴛᴍᴜᴛᴇ> <ᴠᴀʟᴜᴇ>*:* `Aᴄᴛɪᴏɴ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴡʜᴇɴ ᴜsᴇʀ ʜᴀᴠᴇ ᴇxᴄᴇᴇᴅᴇᴅ ғʟᴏᴏᴅ ʟɪᴍɪᴛ. ʙᴀɴ/ᴋɪᴄᴋ/ᴍᴜᴛᴇ/ᴛᴍᴜᴛᴇ/ᴛʙᴀɴ`
+➥ /setfloodmode <ʙᴀɴ/ᴋɪᴄᴋ/ᴍᴜᴛᴇ/ᴛʙᴀɴ/ᴛᴍᴜᴛᴇ> <ᴠᴀʟᴜᴇ>*:* `ᴛɪɴᴅᴀᴋᴀɴ ʏᴀɴɢ ʜᴀʀᴜs ᴅɪʟᴀᴋᴜᴋᴀɴ ᴋᴇᴛɪᴋᴀ ᴘᴇɴɢɢᴜɴᴀ ᴛᴇʟᴀʜ ᴍᴇʟᴀᴍᴘᴀᴜɪ ʙᴀᴛᴀs ʙᴀɴᴊɪʀ. ʙᴀɴ/ᴋɪᴄᴋ/ᴍᴜᴛᴇ/ᴛᴍᴜᴛᴇ/ᴛʙᴀɴ`
 
  • *ɴᴏᴛᴇ:*
  
- `• Vᴀʟᴜᴇ ᴍᴜsᴛ ʙᴇ ғɪʟʟᴇᴅ ғᴏʀ ᴛʙᴀɴ ᴀɴᴅ ᴛᴍᴜᴛᴇ!!`
- Iᴛ ᴄᴀɴ ʙᴇ:
+ `• ɴɪʟᴀɪ ʜᴀʀᴜs ᴅɪɪsɪ ᴜɴᴛᴜᴋ ᴛʙᴀɴ ᴅᴀɴ ᴛᴍᴜᴛᴇ!!`
+ sᴇᴘᴇʀᴛɪ:
  `5ᴍ` = 5 ᴍɪɴᴜᴛᴇs
  `6ʜ` = 6 ʜᴏᴜʀs
  `3ᴅ` = 3 ᴅᴀʏs
