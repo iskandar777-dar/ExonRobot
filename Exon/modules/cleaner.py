@@ -94,23 +94,23 @@ def set_blue_text_must_click(update: Update, context: CallbackContext):
         val = args[0].lower()
         if val in ("off", "no"):
             sql.set_cleanbt(chat.id, False)
-            reply = f"ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ <b>{html.escape(chat.title)}</b>"
+            reply = f"ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ᴅɪɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ᴜɴᴛᴜᴋ <b>{html.escape(chat.title)}</b>"
 
             message.reply_text(reply, parse_mode=ParseMode.HTML)
 
         elif val in ("yes", "on"):
             sql.set_cleanbt(chat.id, True)
-            reply = f"ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ʜᴀs ʙᴇᴇɴ ᴇɴᴀʙʟᴇᴅ ғᴏʀ <b>{html.escape(chat.title)}</b>"
+            reply = f"ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ᴅɪᴀᴋᴛɪꜰᴋᴀɴ ᴜɴᴛᴜᴋ <b>{html.escape(chat.title)}</b>"
 
             message.reply_text(reply, parse_mode=ParseMode.HTML)
 
         else:
-            reply = "ɪɴᴠᴀʟɪᴅ ᴀʀɢᴜᴍᴇɴᴛ.ᴀᴄᴄᴇᴘᴛᴇᴅ ᴠᴀʟᴜᴇs ᴀʀᴇ 'yes', 'on', \  'no', 'off'"
+            reply = "ɴɪʟᴀɪ sᴀʟᴀʜ, ʜᴀɴʏᴀ ᴍᴇɴᴇʀɪᴍᴀ ᴘᴇʀɪɴᴛᴀʜ 'yes', 'on', \  'no', 'off'"
             message.reply_text(reply)
     else:
         clean_status = sql.is_enabled(chat.id)
         clean_status = "Enabled" if clean_status else "Disabled"
-        reply = f"ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ғᴏʀ <b>{html.escape(chat.title)}</b> : <b>{clean_status}</b>"
+        reply = f"ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ᴜɴᴛᴜᴋ <b>{html.escape(chat.title)}</b> : <b>{clean_status}</b>"
 
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
@@ -123,13 +123,13 @@ def add_bluetext_ignore(update: Update, context: CallbackContext):
     if len(args) >= 1:
         val = args[0].lower()
         if added := sql.chat_ignore_command(chat.id, val):
-            reply = f"<b>{args[0]}</b> ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ ᴛᴏ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
+            reply = f"<b>{args[0]}</b> ᴅɪᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
         else:
-            reply = "ᴄᴏᴍᴍᴀɴᴅ ɪs ᴀʟʀᴇᴀᴅʏ ɪɢɴᴏʀᴇᴅ."
+            reply = "ᴄᴏᴍᴍᴀɴᴅ ᴅɪᴀʙᴀɪᴋᴀɴ."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "ɴᴏ ᴄᴏᴍᴍᴀɴᴅ sᴜᴘᴘʟɪᴇᴅ ᴛᴏ ʙᴇ ɪɢɴᴏʀᴇᴅ."
+        reply = "ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴅɪsᴇᴅɪᴀᴋᴀɴ ᴜɴᴛᴜᴋ ᴅɪᴀʙᴀɪᴋᴀɴ."
         message.reply_text(reply)
 
 
@@ -142,14 +142,14 @@ def remove_bluetext_ignore(update: Update, context: CallbackContext):
         val = args[0].lower()
         if removed := sql.chat_unignore_command(chat.id, val):
             reply = (
-                f"<b>{args[0]}</b> ʜᴀs ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ ғʀᴏᴍ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
+                f"<b>{args[0]}</b> ᴅɪʜᴀᴘᴜsᴋᴀɴ ᴅᴀʀɪ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
             )
         else:
-            reply = "ᴄᴏᴍᴍᴀɴᴅ ɪsɴ'ᴛ ɪɢɴᴏʀᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ."
+            reply = "ᴘᴇʀɪɴᴛᴀʜ ᴛɪᴅᴀᴋ ᴅɪᴀʙᴀɪᴋᴀɴ sᴀᴀᴛ ɪɴɪ."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "ɴᴏ ᴄᴏᴍᴍᴀɴᴅ sᴜᴘᴘʟɪᴇᴅ ᴛᴏ ʙᴇ ᴜɴɪɢɴᴏʀᴇᴅ."
+        reply = "ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴅɪsᴇᴅɪᴀᴋᴀɴ ᴜɴᴛᴜᴋ ᴅɪᴀʙᴀɪᴋᴀɴ."
         message.reply_text(reply)
 
 
@@ -160,14 +160,14 @@ def add_bluetext_ignore_global(update: Update, context: CallbackContext):
     if len(args) >= 1:
         val = args[0].lower()
         if added := sql.global_ignore_command(val):
-            reply = f"<b>{args[0]}</b> ʜᴀs ʙᴇᴇɴ ᴀᴅᴅᴇᴅ ᴛᴏ ɢʟᴏʙᴀʟ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
+            reply = f"<b>{args[0]}</b> ʙᴇʀʜᴀsɪʟ ᴅɪᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʟᴏʙᴀʟ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
 
         else:
-            reply = "ᴄᴏᴍᴍᴀɴᴅ ɪs ᴀʟʀᴇᴀᴅʏ ɪɢɴᴏʀᴇᴅ."
+            reply = "ᴄᴏᴍᴍᴀɴᴅ ᴅɪᴀʙᴀɪᴋᴀɴ."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "ɴᴏ ᴄᴏᴍᴍᴀɴᴅ sᴜᴘᴘʟɪᴇᴅ ᴛᴏ ʙᴇ ɪɢɴᴏʀᴇᴅ."
+        reply = "ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴅɪsᴇᴅɪᴀᴋᴀɴ ᴜɴᴛᴜᴋ ᴅɪᴀʙᴀɪᴋᴀɴ."
         message.reply_text(reply)
 
 
@@ -178,14 +178,14 @@ def remove_bluetext_ignore_global(update: Update, context: CallbackContext):
     if len(args) >= 1:
         val = args[0].lower()
         if removed := sql.global_unignore_command(val):
-            reply = f"<b>{args[0]}</b> ʜᴀs ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ ғʀᴏᴍ ɢʟᴏʙᴀʟ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
+            reply = f"<b>{args[0]}</b> ʙᴇʀʜᴀsɪʟ ᴅɪᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʟᴏʙᴀʟ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ɪɢɴᴏʀᴇ ʟɪsᴛ."
 
         else:
-            reply = "ᴄᴏᴍᴍᴀɴᴅ ɪsɴ'ᴛ ɪɢɴᴏʀᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ."
+            reply = "ᴘᴇʀɪɴᴛᴀʜ ᴛɪᴅᴀᴋ ᴅɪᴀʙᴀɪᴋᴀɴ sᴀᴀᴛ ɪɴɪ."
         message.reply_text(reply, parse_mode=ParseMode.HTML)
 
     else:
-        reply = "No ᴄᴏᴍᴍᴀɴᴅ sᴜᴘᴘʟɪᴇᴅ ᴛᴏ ʙᴇ ᴜɴɪɢɴᴏʀᴇᴅ."
+        reply = "ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴅɪsᴇᴅɪᴀᴋᴀɴ ᴜɴᴛᴜᴋ ᴅɪᴀʙᴀɪᴋᴀɴ."
         message.reply_text(reply)
 
 
@@ -199,19 +199,19 @@ def bluetext_ignore_list(update: Update, context: CallbackContext):
     text = ""
 
     if global_ignored_list:
-        text = "The ғᴏʟʟᴏᴡɪɴɢ ᴄᴏᴍᴍᴀɴᴅs ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ɪɢɴᴏʀᴇᴅ ɢʟᴏʙʏᴀʟʟʏ ғʀᴏᴍ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ :\n"
+        text = "ᴘᴇʀɪɴᴛᴀʜ ʙᴇʀɪᴋᴜᴛ sᴀᴀᴛ ɪɴɪ ᴅɪᴀʙᴀɪᴋᴀɴ sᴇᴄᴀʀᴀ ɢʟᴏʙᴀʟ ᴅᴀʀɪ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ :\n"
 
         for x in global_ignored_list:
             text += f" - <code>{x}</code>\n"
 
     if local_ignore_list:
-        text += "\nᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ᴄᴏᴍᴍᴀɴᴅs ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ɪɢɴᴏʀᴇᴅ ʟᴏᴄᴀʟʟʏ ғʀᴏᴍ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ :\n"
+        text += "\nᴘᴇʀɪɴᴛᴀʜ ʙᴇʀɪᴋᴜᴛ sᴀᴀᴛ ɪɴɪ ᴅɪᴀʙᴀɪᴋᴀɴ sᴇᴄᴀʀᴀ ʟᴏᴋᴀʟ ᴅᴀʀɪ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ :\n"
 
         for x in local_ignore_list:
             text += f" - <code>{x}</code>\n"
 
     if text == "":
-        text = "ɴᴏ ᴄᴏᴍᴍᴀɴᴅs ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ɪɢɴᴏʀᴇᴅ ғʀᴏᴍ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ."
+        text = "ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ sᴀᴀᴛ ɪɴɪ ᴅɪᴀʙᴀɪᴋᴀɴ ᴅᴀʀɪ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ."
         message.reply_text(text)
         return
 
@@ -267,19 +267,19 @@ __handlers__ = [
 ]
 
 __help__ = f"""
-ʙʟᴜᴇ ᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ʀᴇᴍᴏᴠᴇᴅ ᴀɴʏ ᴍᴀᴅᴇ ᴜᴘ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴘᴇᴏᴘʟᴇ sᴇɴᴅ ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.
+ʙʟᴜᴇ ᴛᴇxᴛ ᴄʟᴇᴀɴᴇʀ ᴍᴇɴɢʜᴀᴘᴜs sᴇᴍᴜᴀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴅɪʙᴜᴀᴛ-ʙᴜᴀᴛ ʏᴀɴɢ ᴅɪᴋɪʀɪᴍ ᴏʀᴀɴɢ ᴅᴀʟᴀᴍ ᴏʙʀᴏʟᴀɴ ᴀɴᴅᴀ.
 
-• /cleanblue <on/off/yes/no>*:* `ᴄʟᴇᴀɴ ᴄᴏᴍᴍᴀɴᴅs ᴀғᴛᴇʀ sᴇɴᴅɪɴɢ`
+• /cleanblue <on/off/yes/no>*:* `ᴍᴇᴍʙᴇʀsɪʜᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ sᴇᴛᴇʟᴀʜ ᴅɪᴋɪʀɪᴍ`
 
-• /ignoreblue <word>*:* `ᴘʀᴇᴠᴇɴᴛ ᴀᴜᴛᴏ ᴄʟᴇᴀɴɪɴɢ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ `
+• /ignoreblue <word>*:* `ᴍᴇɴᴄᴇɢᴀʜ ᴏᴛᴏᴍᴀᴛɪs ᴍᴇᴍʙᴇʀsɪʜᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ \`
 
-• /unignoreblue <word>*:* `ʀᴇᴍᴏᴠᴇ ᴘʀᴇᴠᴇɴᴛ ᴀᴜᴛᴏ ᴄʟᴇᴀɴɪɴɢ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ `
+• /unignoreblue <word>*:* `ᴍᴇɴɢʜᴀᴘᴜs ᴍᴇɴᴄᴇɢᴀʜ ᴏᴛᴏᴍᴀᴛɪs ᴍᴇᴍʙᴇʀsɪʜᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ `
 
-• /listblue*:* `ʟɪsᴛ ᴄᴜʀʀᴇɴᴛʟʏ ᴡʜɪᴛᴇʟɪsᴛᴇᴅ ᴄᴏᴍᴍᴀɴᴅs `
+• /listblue*:* `ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ sᴀᴀᴛ ɪɴɪ ᴍᴀsᴜᴋ ᴅᴀꜰᴛᴀʀ ᴘᴜᴛɪʜ `
  
-*ᴏɴʟʏ ᴄᴏᴍᴍᴀɴᴅs, ᴀᴅᴍɪɴs ᴄᴀɴɴᴏᴛ ᴜsᴇ ᴛʜᴇsᴇ:*
+*ʜᴀɴʏᴀ sᴜᴅᴏ:*
  
-• /gignoreblue <word>*:* `ɢʟᴏʙᴀʟʟʏ ɪɢɴᴏʀᴇᴀ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ᴏғ sᴀᴠᴇᴅ ᴡᴏʀᴅ ᴀᴄʀᴏss` {BOT_NAME}.
+• /gignoreblue <word>*:* `ᴅɪᴀʙᴀɪᴋᴀɴ sᴇᴄᴀʀᴀ ɢʟᴏʙᴀʟ ʙʟᴜᴇᴛᴇxᴛ ᴄʟᴇᴀɴɪɴɢ ᴅᴀʀɪ ᴋᴀᴛᴀ ʏᴀɴɢ ᴅɪsɪᴍᴘᴀɴ ᴅɪ sᴇʟᴜʀᴜʜ` {BOT_NAME}.
 
-• /ungignoreblue <word>*:* `ʀᴇᴍᴏᴠᴇ sᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ғʀᴏᴍ ɢʟᴏʙᴀʟ ᴄʟᴇᴀɴɪɴɢ ʟɪsᴛ `
+• /ungignoreblue <word>*:* `ʜᴀᴘᴜs ᴘᴇʀɪɴᴛᴀʜ ᴛᴇʀsᴇʙᴜᴛ ᴅᴀʀɪ ɢʟᴏʙᴀʟ ᴄʟᴇᴀɴɪɴɢ ʟɪsᴛ `
 """
