@@ -33,22 +33,22 @@ from Exon.utils.dbfunctions import antiservice_off, antiservice_on, is_antiservi
 @adminsOnly("can_change_info")
 async def anti_service(_, message):
     if len(message.command) != 2:
-        return await message.reply_text("ᴜsᴀɢᴇ: /antiservice [on | off]")
+        return await message.reply_text("ɢᴜɴᴀᴋᴀɴ: /antiservice [on | off]")
     status = message.text.split(None, 1)[1].strip()
     status = status.lower()
     chat_id = message.chat.id
     if status == "on":
         await antiservice_on(chat_id)
         await message.reply_text(
-            "ᴇɴᴀʙʟᴇᴅ ᴀɴᴛɪsᴇʀᴠɪᴄᴇ sʏsᴛᴇᴍ. ɪ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ sᴇʀᴠɪᴄᴇ ᴍᴇssᴀɢᴇs ғʀᴏᴍ ɴᴏᴡ ᴏɴ."
+            "ᴍᴇɴɢᴀᴋᴛɪꜰᴋᴀɴ ᴀɴᴛɪsᴇʀᴠɪᴄᴇ sɪsᴛᴇᴍ. sᴀʏᴀ ᴀᴋᴀɴ ᴍᴇɴɢʜᴀᴘᴜs ᴘᴇsᴀɴ ʟᴀʏᴀɴᴀɴ ᴍᴜʟᴀɪ sᴇᴋᴀʀᴀɴɢ."
         )
     elif status == "off":
         await antiservice_off(chat_id)
         await message.reply_text(
-            "ᴅɪsᴀʙʟᴇᴅ ᴀɴᴛɪsᴇʀᴠɪᴄᴇ sʏsᴛᴇᴍ. I ᴡᴏɴ'ᴛ ʙᴇ ᴅᴇʟᴇᴛɪɴɢ sᴇʀᴠɪᴄᴇ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ɴᴏᴡ ᴏɴ."
+            " ᴍᴇɴᴏɴᴀᴋᴛɪꜰᴋᴀɴ ᴀɴᴛɪsᴇʀᴠɪᴄᴇ sɪsᴛᴇᴍ. sᴀʏᴀ ᴛɪᴅᴀᴋ ᴀᴋᴀɴ ᴍᴇɴɢʜᴀᴘᴜs ᴘᴇsᴀɴ ʟᴀʏᴀɴᴀɴ ᴍᴜʟᴀɪ sᴇᴋᴀʀᴀɴɢ."
         )
     else:
-        await message.reply_text("ᴜɴᴋɴᴏᴡɴ sᴜғғɪx, ᴜsᴇ /antiservice [enable|disable]")
+        await message.reply_text("ᴀᴋʜɪʀᴀɴ ʏᴀɴɢ ᴛɪᴅᴀᴋ ᴅɪᴋᴇᴛᴀʜᴜɪ, ɢᴜɴᴀᴋᴀɴ /antiservice [enable|disable]")
 
 
 @pgram.on_message(filters.service, group=11)
