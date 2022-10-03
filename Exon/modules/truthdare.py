@@ -28,17 +28,27 @@ from Exon.events import register
 
 
 @register(pattern="[/!]dare")
-async def dare(event):
-    gay = requests.get("https://api.truthordarebot.xyz/v1/dare").json()
-    dare = gay["question"]
-    BOOB = "{}"
-    await event.reply(BOOB.format(dare))
-
+dare(update: Update, context: CallbackContext):
+    args = context.args
+    update.effective_message.reply_text(random.choice(truth_and_dare_string.DARE))
 
 @register(pattern="[/!]truth")
-async def truth(event):
-    gae = requests.get("https://api.truthordarebot.xyz/v1/truth").json()
-    truth = gae["question"]
-    BOOB = "{}"
+truth(update: Update, context: CallbackContext):
+    args = context.args
+    update.effective_message.reply_text(random.choice(truth_and_dare_string.TRUTH))
 
-    await event.reply(BOOB.format(truth))
+@register(pattern="[/!]truth")
+dare(update: Update, context: CallbackContext):
+    args = context.args
+    update.effective_message.reply_text(random.choice(truth_and_dare_string.DARE))
+    
+    
+ACAK_HANDLER = DisableAbleCommandHandler("acak", acak, run_async=True)
+TRUTH_HANDLER = DisableAbleCommandHandler("truth", truth, run_async=True)
+DARE_HANDLER = DisableAbleCommandHandler("dare", dare, run_async=True)
+
+dispatcher.add_handler(ACAK_HANDLER)
+dispatcher.add_handler(TRUTH_HANDLER)
+dispatcher.add_handler(DARE_HANDLER)
+
+__mod_name__ = "Truth Or Dare"
