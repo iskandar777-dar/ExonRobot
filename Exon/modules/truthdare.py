@@ -52,3 +52,4 @@ dispatcher.add_handler(TRUTH_HANDLER)
 dispatcher.add_handler(DARE_HANDLER)
 
 __mod_name__ = "Truth Or Dare"
+__handlers__ = [ACAK_HANDLER, TRUTH_HANDLER, DARE_HANDLER]
