@@ -86,44 +86,44 @@ def ban(update: Update, context: CallbackContext) -> str:
             sender_chat_id=message.reply_to_message.sender_chat.id,
         ):
             message.reply_text(
-                f"ᴄʜᴀɴɴᴇʟ {html.escape(message.reply_to_message.sender_chat.title)} ᴡᴀs ʙᴀɴɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ғʀᴏᴍ {html.escape(chat.title)}",
+                f"ᴄʜᴀɴɴᴇʟ {html.escape(message.reply_to_message.sender_chat.title)} ʙᴇʀʜᴀsɪʟ ʙᴀɴɴᴇᴅ ᴅᴀʀɪ {html.escape(chat.title)}",
                 parse_mode="html",
             )
 
         else:
-            message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ʙᴀɴ ᴄʜᴀɴɴᴇʟ")
+            message.reply_text("ɢᴀɢᴀʟ ʙᴀɴɴᴇᴅ ᴄʜᴀɴɴᴇʟ")
         return
     user_id, reason = extract_user_and_text(message, args)
     if not user_id:
-        message.reply_text("⚠️ ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ.")
+        message.reply_text("⚠️ ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ.")
         return log_message
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ":
+        if excp.message != "ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ":
             raise
-        message.reply_text("ᴄᴀɴ'ᴛ sᴇᴇᴍ ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴘᴇʀsᴏɴ.")
+        message.reply_text("sᴇᴘᴇʀᴛɪɴʏᴀ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴍᴇɴᴇᴍᴜᴋᴀɴ ᴏʀᴀɴɢ ɪɴɪ.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("ᴏʜ ʏᴇᴀʜ, ʙᴀɴ ᴍʏsᴇʟғ, ɴᴏᴏʙ sᴀʟᴀ!")
+        message.reply_text("ᴏʜ ʏᴀ, ʙᴀɴ sᴇɴᴅɪʀɪ, ɴᴏᴏʙ ᴋᴀᴍᴜ!")
         return log_message
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("ᴛʀʏɪɴɢ ᴛᴏ ᴘᴜᴛ ᴍᴇ ᴀɢᴀɪɴsᴛ ᴍʏ ᴏɴɪᴄʜᴀɴ ʜᴜʜ?")
+            message.reply_text("ᴍᴇɴᴄᴏʙᴀ ᴍᴇɴᴇᴍᴘᴀᴛᴋᴀɴ sᴀʏᴀ ᴍᴇʟᴀᴡᴀɴ ᴛᴜᴀɴ sᴀʏᴀ ʜᴀʜ?")
         elif user_id in DEV_USERS:
-            message.reply_text("I ᴄᴀɴ'ᴛ ᴀᴄᴛ ᴀɢᴀɪɴsᴛ ᴏᴜʀ ғᴀᴍɪʟʏ.")
+            message.reply_text("sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ʙᴇʀᴛɪɴᴅᴀᴋ ᴍᴇʟᴀᴡᴀɴ ᴋᴇʟᴜᴀʀɢᴀ ᴋᴀᴍɪ.")
         elif user_id in DRAGONS:
             message.reply_text(
-                "ғɪɢʜᴛɪɴɢ ᴏᴜʀ ʙᴇsᴛ ғʀɪᴇɴᴅs ʜᴇʀᴇ ᴡɪʟʟ ᴘᴜᴛ ᴜsᴇʀ ʟɪᴠᴇs ᴀᴛ risk."
+                "ᴍᴇʟᴀᴡᴀɴ sᴀʜᴀʙᴀᴛ ᴋɪᴛᴀ ᴅɪ sɪɴɪ ᴀᴋᴀɴ ᴍᴇᴍʙᴀʜᴀʏᴀᴋᴀɴ ɴʏᴀᴡᴀ ᴘᴇɴɢɢᴜɴᴀ."
             )
         elif user_id in DEMONS:
-            message.reply_text("ʙʀɪɴɢ ᴀɴ ᴏʀᴅᴇʀ ғʀᴏᴍ ᴏɴɪᴄʜᴀɴ ᴛᴏ ғɪɢʜᴛ ᴏᴜʀ ғʀɪᴇɴᴅs.")
+            message.reply_text("ᴍᴇᴍʙᴀᴡᴀ ᴘᴇsᴀɴᴀɴ ᴅᴀʀɪ ᴛᴜᴀɴᴋᴜ ᴜɴᴛᴜᴋ ᴍᴇʟᴀᴡᴀɴ ᴛᴇᴍᴀɴ-ᴛᴇᴍᴀɴ ᴋɪᴛᴀ.")
         elif user_id in TIGERS:
-            message.reply_text("ʙʀɪɴɢ ᴀɴ ᴏʀᴅᴇʀ ғʀᴏᴍ ᴏɴɪᴄʜᴀɴ ᴛᴏ ғɪɢʜᴛ ᴏᴜʀ ᴄʟᴀssᴍᴀᴛᴇs")
+            message.reply_text("ᴍᴇᴍʙᴀᴡᴀ ᴘᴇsᴀɴᴀɴ ᴅᴀʀɪ ᴛᴜᴀɴᴋᴜ ᴜɴᴛᴜᴋ ᴍᴇʟᴀᴡᴀɴ ᴛᴇᴍᴀɴ-ᴛᴇᴍᴀɴ ᴋɪᴛᴀ")
         elif user_id in WOLVES:
-            message.reply_text("ɪɢɴɪᴛᴇ ᴀᴄᴄᴇss ᴍᴀᴋᴇ ᴛʜᴇᴍ ʙᴀɴ ɪᴍᴍᴜɴᴇ!")
+            message.reply_text("ᴍᴇɴʏᴀʟᴀᴋᴀɴ ᴀᴋsᴇs ᴍᴇᴍʙᴜᴀᴛ ᴍᴇʀᴇᴋᴀ ᴋᴇʙᴀʟ!")
         else:
-            message.reply_text("⚠️ ᴄᴀɴɴᴏᴛ ʙᴀɴɴᴇᴅ ᴀᴅᴍɪɴ.")
+            message.reply_text("⚠️ ᴛɪᴅᴀᴋ ʙɪsᴀ ʙᴀɴɴᴇᴅ ᴀᴅᴍɪɴ.")
         return log_message
     if message.text.startswith("/s"):
         silent = True
@@ -138,7 +138,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         f"<b>ᴜsᴇʀ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
     if reason:
-        log += f"<b>ʀᴇᴀsᴏɴ:</b> {reason}"
+        log += f"<b>ᴀʟᴀsᴀɴ:</b> {reason}"
     try:
         chat.ban_member(user_id)
         if silent:
@@ -154,7 +154,7 @@ def ban(update: Update, context: CallbackContext) -> str:
             f"<b>• ʙᴀɴɴᴇᴅ ʙʏ:</b> {mention_html(user.id, html.escape(user.first_name))}"
         )
         if reason:
-            reply += f"\n<b>• ʀᴇᴀsᴏɴ:</b> {html.escape(reason)}"
+            reply += f"\n<b>• ᴀʟᴀsᴀɴ:</b> {html.escape(reason)}"
         bot.sendMessage(
             chat.id,
             reply,
@@ -174,7 +174,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         )
         return log
     except BadRequest as excp:
-        if excp.message == "ʀᴇᴘʟʏ ᴍᴇssᴀɢᴇ ɴᴏᴛ ғᴏᴜɴᴅ":
+        if excp.message == "ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ":
             # Do not reply
             if silent:
                 return log
@@ -183,13 +183,13 @@ def ban(update: Update, context: CallbackContext) -> str:
         else:
             LOGGER.warning(update)
             LOGGER.exception(
-                "ERROR ʙᴀɴɴɪɴɢ ᴜsᴇʀ %s ɪɴ ᴄʜᴀᴛ %s (%s) ᴅᴜᴇ ᴛᴏ %s",
+                "ᴋᴇsᴀʟᴀʜᴀɴ ʙᴀɴɴɪɴɢ ᴘᴇɴɢɢᴜɴᴀ %s ᴅᴀʟᴀᴍ ɢʀᴜᴘ %s (%s) ᴋᴀʀᴇɴᴀ %s",
                 user_id,
                 chat.title,
                 chat.id,
                 excp.message,
             )
-            message.reply_text("ᴜʜᴍ...ᴛʜᴀᴛ ᴅɪᴅɴ'ᴛ ᴡᴏʀᴋ...")
+            message.reply_text("ᴜʜᴍ...ɪɴɪ ᴛɪᴅᴀᴋ ʙᴇᴋᴇʀᴊᴀ...")
     return log_message
 
 
@@ -207,23 +207,23 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
     bot, args = context.bot, context.args
     user_id, reason = extract_user_and_text(message, args)
     if not user_id:
-        message.reply_text("⚠️ ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ.")
+        message.reply_text("⚠️ ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ.")
         return log_message
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ":
+        if excp.message != "ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ":
             raise
-        message.reply_text("I ᴄᴀɴ'ᴛ sᴇᴇᴍ ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴜsᴇʀ.")
+        message.reply_text("sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇɴᴇᴍᴜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ ɪɴɪ.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("I'ᴍ ɴᴏᴛ ɢᴏɴɴᴀ BAN ᴍʏsᴇʟғ, ᴀʀᴇ ʏᴏᴜ ɴᴏᴏʙ ?")
+        message.reply_text("sᴀʏᴀ ᴛɪᴅᴀᴋ ᴀᴋᴀɴ ʙᴀɴɴᴇᴅ ᴅɪʀɪ sᴇɴᴅɪʀɪ, ᴀᴘᴀᴋᴀʜ ᴋᴀᴍᴜ ɴᴏᴏʙ ?")
         return log_message
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("I ᴅᴏɴ'ᴛ ғᴇᴇʟ ʟɪᴋᴇ ɪᴛ.")
+        message.reply_text("sᴀʏᴀ ᴛɪᴅᴀᴋ ᴍᴇʀᴀsᴀ ᴍᴇɴʏᴜᴋᴀɪ ɪɴɪ.")
         return log_message
     if not reason:
-        message.reply_text("ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴘᴇᴄɪғɪᴇᴅ ᴀ ᴛɪᴍᴇ ᴛᴏ ʙᴀɴ ᴛʜɪs ᴜsᴇʀ ғᴏʀ!")
+        message.reply_text("ᴀɴᴅᴀ ʙᴇʟᴜᴍ ᴍᴇɴᴇɴᴛᴜᴋᴀɴ ᴡᴀᴋᴛᴜ ᴜɴᴛᴜᴋ ᴍᴇɴᴄᴇᴋᴀʟ ᴘᴇɴɢɢᴜɴᴀ ɪɴɪ!")
         return log_message
     split_reason = reason.split(None, 1)
     time_val = split_reason[0].lower()
@@ -271,23 +271,23 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         )
         return log
     except BadRequest as excp:
-        if excp.message == "ʀᴇᴘʟʏ ᴍᴇssᴀɢᴇ ɴᴏᴛ ғᴏᴜɴᴅ":
+        if excp.message == "ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ":
             # Do not reply
             message.reply_text(
-                f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] ʙᴀɴɴᴇᴅ ғᴏʀ {time_val}.",
+                f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] ʙᴀɴɴᴇᴅ ᴜɴᴛᴜᴋ {time_val}.",
                 quote=False,
             )
             return log
         else:
             LOGGER.warning(update)
             LOGGER.exception(
-                "ᴇʀʀᴏʀ ʙᴀɴɴɪɴɢ ᴜsᴇʀ %s ɪɴ ᴄʜᴀᴛ %s (%s) ᴅᴜᴇ ᴛᴏ %s",
+                "ᴋᴇsᴀʟᴀʜᴀɴ ʙᴀɴɴɪɴɢ ᴘᴇɴɢɢᴜɴᴀ %s ᴅᴀʟᴀᴍ ɢʀᴏᴜᴘ %s (%s) ᴋᴀʀᴇɴᴀ %s",
                 user_id,
                 chat.title,
                 chat.id,
                 excp.message,
             )
-            message.reply_text("ᴡᴇʟʟ ᴅᴀᴍɴ, ɪ ᴄᴀɴ'ᴛ ʙᴀɴ ᴛʜᴀᴛ ᴜsᴇʀ.")
+            message.reply_text("sɪᴀʟᴀɴ, sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ʙᴀɴ ᴘᴇɴɢᴜɴᴀ ɪɴɪ.")
     return log_message
 
 
@@ -310,7 +310,7 @@ def unbanb_btn(update: Update, context: CallbackContext) -> str:
             if not is_user_admin(chat, int(user.id)):
                 bot.answer_callback_query(
                     query.id,
-                    text="⚠️ ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ʀɪɢʜᴛs ᴛᴏ ᴜɴᴍᴜᴛᴇ ᴘᴇᴏᴘʟᴇ",
+                    text="⚠️ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴍᴇᴍɪʟɪᴋɪ ᴄᴜᴋᴜᴘ ʜᴀᴋ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜɴʏɪᴋᴀɴ sᴜᴀʀᴀ ᴏʀᴀɴɢ",
                     show_alert=True,
                 )
                 return ""
@@ -320,7 +320,7 @@ def unbanb_btn(update: Update, context: CallbackContext) -> str:
                 pass
             chat.unban_member(user_id)
             query.message.edit_text(
-                f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] ᴜɴʙᴀɴɴᴇᴅ ʙʏ {mention_html(user.id, html.escape(user.first_name))}",
+                f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] ᴅɪʙᴇʙᴀsᴋᴀɴ ᴏʟᴇʜ {mention_html(user.id, html.escape(user.first_name))}",
                 parse_mode=ParseMode.HTML,
             )
             bot.answer_callback_query(query.id, text="Unbanned!")
@@ -334,12 +334,12 @@ def unbanb_btn(update: Update, context: CallbackContext) -> str:
         if not is_user_admin(chat, int(user.id)):
             bot.answer_callback_query(
                 query.id,
-                text="⚠️ ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ʀɪɢʜᴛs ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ.",
+                text="⚠️ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴍᴇᴍɪʟɪᴋɪ ᴄᴜᴋᴜᴘ ʜᴀᴋ ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜs ᴘᴇsᴀɴ.",
                 show_alert=True,
             )
             return ""
         query.message.delete()
-        bot.answer_callback_query(query.id, text="ᴅᴇʟᴇᴛᴇᴅ !")
+        bot.answer_callback_query(query.id, text="ᴍᴇɴɢʜᴀᴘᴜs !")
         return ""
 
 
@@ -357,26 +357,26 @@ def punch(update: Update, context: CallbackContext) -> str:
     bot, args = context.bot, context.args
     user_id, reason = extract_user_and_text(message, args)
     if not user_id:
-        message.reply_text("⚠️ ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ")
+        message.reply_text("⚠️ ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ")
         return log_message
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ":
+        if excp.message != "ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ":
             raise
-        message.reply_text("⚠️ I ᴄᴀɴ'ᴛ sᴇᴇᴍ ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴜsᴇʀ.")
+        message.reply_text("⚠️ sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇɴᴇᴍᴜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ ɪɴɪ.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("ʏᴇᴀʜʜʜ I'ᴍ ɴᴏᴛ ɢᴏɴɴᴀ ᴅᴏ ᴛʜᴀᴛ.")
+        message.reply_text("ʏᴇᴀʜʜʜ sᴀʏᴀ ᴛɪᴅᴀᴋ ᴀᴋᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ɪᴛᴜ.")
         return log_message
     if is_user_ban_protected(chat, user_id):
-        message.reply_text("I ʀᴇᴀʟʟʏ ᴡɪsʜ ɪ ᴄᴏᴜʟᴅ ᴘᴜɴᴄʜ ᴛʜɪs ᴜsᴇʀ....")
+        message.reply_text("sᴀʏᴀ ʙᴇɴᴀʀ-ʙᴇɴᴀʀ ʙᴇʀʜᴀʀᴀᴘ sᴀʏᴀ ʙɪsᴀ ᴍᴇᴍᴜᴋᴜʟ ᴘᴇɴɢɢᴜɴᴀ ɪɴɪ....")
         return log_message
     if res := chat.unban_member(user_id):
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         bot.sendMessage(
             chat.id,
-            f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] Kicked by {mention_html(user.id, html.escape(user.first_name))}",
+            f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] ᴅɪᴛᴇɴᴅᴀɴɢ ᴏʟᴇʜ {mention_html(user.id, html.escape(user.first_name))}",
             parse_mode=ParseMode.HTML,
         )
         log = (
@@ -389,7 +389,7 @@ def punch(update: Update, context: CallbackContext) -> str:
             log += f"\n<b>ʀᴇᴀsᴏɴ:</b> {reason}"
         return log
     else:
-        message.reply_text("⚠️ ᴡᴇʟʟ ᴅᴀᴍɴ, ɪ ᴄᴀɴ'ᴛ ᴘᴜɴᴄʜ ᴛʜᴀᴛ ᴜsᴇʀ.")
+        message.reply_text("⚠️ sɪᴀʟᴀɴ, sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇᴜᴋᴜʟ ᴘᴇɴɢɢᴜɴᴀ ɪɴɪ.")
     return log_message
 
 
@@ -398,14 +398,14 @@ def punch(update: Update, context: CallbackContext) -> str:
 def punchme(update: Update, context: CallbackContext):
     user_id = update.effective_message.from_user.id
     if is_user_admin(update.effective_chat, user_id):
-        update.effective_message.reply_text("I ᴡɪsʜ I ᴄᴏᴜʟᴅ... ʙᴜᴛ ʏᴏᴜ'ʀᴇ ᴀɴ ᴀᴅᴍɪɴ .")
+        update.effective_message.reply_text("ᴀᴋᴜ ʙᴇʀʜᴀʀᴀᴘ ᴀᴋᴜ ʙɪsᴀ... ᴛᴀᴘɪ ᴋᴀᴍᴜ ᴀᴅᴍɪɴ.")
         return
     if res := update.effective_chat.unban_member(user_id):
         update.effective_message.reply_text(
-            "ᴘᴜɴᴄʜᴇs ʏᴏᴜ ᴏᴜᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ !!",
+            "ᴍᴇᴍᴜᴋᴜʟ ᴋᴀᴍᴜ ᴋᴇʟᴜᴀʀ ɢʀᴜᴘ !!",
         )
     else:
-        update.effective_message.reply_text("ʜᴜʜ? I ᴄᴀɴ'ᴛ :/")
+        update.effective_message.reply_text("ʜᴜʜ? ᴀᴋᴜ ᴛɪᴅᴀᴋ ʙɪsᴀ :/")
 
 
 @connection_status
@@ -426,33 +426,33 @@ def unban(update: Update, context: CallbackContext) -> Optional[str]:
             sender_chat_id=message.reply_to_message.sender_chat.id,
         ):
             message.reply_text(
-                f"ᴄʜᴀɴɴᴇʟ {html.escape(message.reply_to_message.sender_chat.title)} ᴡᴀs ᴜɴʙᴀɴɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ғʀᴏᴍ {html.escape(chat.title)}",
+                f"ᴄʜᴀɴɴᴇʟ {html.escape(message.reply_to_message.sender_chat.title)} ʙᴇʀʜᴀsɪʟ ᴍᴇᴍʙᴇʙᴀsᴋᴀɴ ᴅᴀʀɪ {html.escape(chat.title)}",
                 parse_mode="html",
             )
 
         else:
-            message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ᴜɴʙᴀɴ ᴄʜᴀɴɴᴇʟ")
+            message.reply_text("ɢᴀɢᴀʟ ᴜɴᴛᴜᴋ ʙᴀɴ ᴄʜᴀɴɴᴇʟ")
         return
     user_id, reason = extract_user_and_text(message, args)
     if not user_id:
-        message.reply_text("⚠️ ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ.")
+        message.reply_text("⚠️ ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ.")
         return log_message
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message != "ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ":
+        if excp.message != "ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ":
             raise
-        message.reply_text("I ᴄᴀɴ'ᴛ sᴇᴇᴍ ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴜsᴇʀ.")
+        message.reply_text("sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇɴᴇᴍᴜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ ɪɴɪ.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("ʜᴏᴡ ᴡᴏᴜʟᴅ ɪ ᴜɴʙᴀɴ ᴍʏsᴇʟғ ɪғ ɪ ᴡᴀsɴ'ᴛ ʜᴇʀᴇ...?")
+        message.reply_text("ʙᴀɢᴀɪᴍᴀɴᴀ sᴀʏᴀ ᴀᴋᴀɴ ᴍᴇᴍʙᴀᴛᴀʟᴋᴀɴ ʟᴀʀᴀɴɢᴀɴ sᴀʏᴀ ᴊɪᴋᴀ sᴀʏᴀ ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴅɪ sɪɴɪ...?")
         return log_message
     if is_user_in_chat(chat, user_id):
-        message.reply_text("⚠️ ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ.")
+        message.reply_text("⚠️ ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ.")
         return log_message
     chat.unban_member(user_id)
     message.reply_text(
-        f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] ᴡᴀs ᴜɴʙᴀɴɴᴇᴅ ʙʏ {mention_html(user.id, user.first_name)}",
+        f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] ᴛᴇʟᴀʜ ᴅɪʙᴇʙᴀsᴋᴀɴ ᴏʟᴇʜ {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
     log = (
@@ -462,7 +462,7 @@ def unban(update: Update, context: CallbackContext) -> Optional[str]:
         f"<b>ᴜsᴇʀ:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     )
     if reason:
-        log += f"\n<b>ʀᴇᴀsᴏɴ:</b> {reason}"
+        log += f"\n<b>ᴀʟᴀsᴀɴ:</b> {reason}"
     return log
 
 
@@ -479,22 +479,22 @@ def selfunban(update: Update, context: CallbackContext) -> str:
     try:
         chat_id = int(args[0])
     except:
-        message.reply_text("ɢɪᴠᴇ ᴀ ᴠᴀʟɪᴅ ᴄʜᴀᴛ ɪᴅ.")
+        message.reply_text("ʙᴇʀɪᴋᴀɴ ᴄʜᴀᴛ ɪᴅ ʏᴀɴɢ ʙᴇɴᴀʀ.")
         return
     chat = bot.getChat(chat_id)
     try:
         member = chat.get_member(user.id)
     except BadRequest as excp:
-        if excp.message == "ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ":
-            message.reply_text("I ᴄᴀɴ'ᴛ sᴇᴇᴍ ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴜsᴇʀ.")
+        if excp.message == "ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ":
+            message.reply_text("sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇɴᴇᴍᴜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ ɪɴɪ.")
             return
         else:
             raise
     if is_user_in_chat(chat, user.id):
-        message.reply_text("Aren't you already in the chat??")
+        message.reply_text("ʙᴜᴋᴀɴ ᴋᴀᴜ sᴜᴅᴀʜ ʙᴇʀᴀᴅᴀ ᴅɪɢʀᴜᴘ ɪɴɪ??")
         return
     chat.unban_member(user.id)
-    message.reply_text(f"ʏᴇᴘ, ɪ ʜᴀᴠᴇ ᴜɴʙᴀɴɴᴇᴅ ᴛʜᴇ ᴜsᴇʀ.")
+    message.reply_text(f"ʏᴇᴘ, sᴀʏᴀ ᴛᴇʟᴀʜ ᴍᴇᴍʙᴀᴛᴀʟᴋᴀɴ ᴘᴇᴍʙʟᴏᴋɪʀᴀɴ ᴘᴇɴɢɢᴜɴᴀ.")
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#ᴜɴʙᴀɴɴᴇᴅ\n"
@@ -511,14 +511,14 @@ def banme(update: Update, context: CallbackContext):
     chat = update.effective_chat
     user = update.effective_user
     if is_user_admin(update.effective_chat, user_id):
-        update.effective_message.reply_text("⚠️ I ᴄᴀɴɴᴏᴛ ʙᴀɴɴᴇᴅ ᴀᴅᴍɪɴ.")
+        update.effective_message.reply_text("⚠️ sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ʙᴀɴɴᴇᴅ ᴀᴅᴍɪɴ.")
         return
     if res := update.effective_chat.ban_member(user_id):
-        update.effective_message.reply_text("ʏᴇs, ʏᴏᴜ'ʀᴇ ʀɪɢʜᴛ! ɢᴛғᴏ..")
+        update.effective_message.reply_text("ʏᴇs, ᴋᴀᴍᴜ ʙᴇɴᴀʀ!")
         return f"<b>{html.escape(chat.title)}:</b>\n#ʙᴀɴᴍᴇ\n<b>ᴜsᴇʀ:</b> {mention_html(user.id, user.first_name)}\n<b>ɪᴅ:</b> <code>{user_id}</code>"
 
     else:
-        update.effective_message.reply_text("Huh? I can't :/")
+        update.effective_message.reply_text("Huh? sᴀʏᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ :/")
 
 
 @dev_plus
@@ -529,48 +529,48 @@ def abishnoi(update: Update, context: CallbackContext):
         chat_id = str(args[0])
         del args[0]
     except TypeError:
-        update.effective_message.reply_text("ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ ᴀ ᴄʜᴀᴛ ᴛᴏ ᴇᴄʜᴏ ᴛᴏ!")
+        update.effective_message.reply_text("ᴛᴏʟᴏɴɢ ʙᴇʀɪ sᴀʏᴀ ᴏʙʀᴏʟᴀɴ ᴜɴᴛᴜᴋ ᴅɪɢᴀᴜɴɢᴋᴀɴ!")
     to_send = " ".join(args)
     if len(to_send) >= 2:
         try:
             bot.sendMessage(int(chat_id), to_send)
         except TelegramError:
-            LOGGER.warning("ᴄᴏᴜʟᴅɴ'ᴛ sᴇɴᴅ ᴛᴏ ɢʀᴏᴜᴘ %s", chat_id)
+            LOGGER.warning("ᴛɪᴅᴀᴋ ʙɪsᴀ ᴋɪʀɪᴍ ᴋᴇ ɢʀᴜᴘ %s", chat_id)
             update.effective_message.reply_text(
-                "ᴄᴏᴜʟᴅɴ'ᴛ sᴇɴᴅ ᴛʜᴇ ᴍᴇssᴀɢᴇ. ᴘᴇʀʜᴀᴘs ɪ'ᴍ ɴᴏᴛ ᴘᴀʀᴛ ᴏғ ᴛʜᴀᴛ ɢʀᴏᴜᴘ?"
+                "ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ. ᴍᴜɴɢᴋɪɴ sᴀʏᴀ ʙᴜᴋᴀɴ ʙᴀɢɪᴀɴ ᴅᴀʀɪ ɢʀᴜᴘ ɪᴛᴜ?"
             )
 
 
 __help__ = """
 *ᴜsᴇʀ ᴄᴏᴍᴍᴀɴᴅs:*
 
-• /kickme*:* `ᴋɪᴄᴋs ᴛʜᴇ ᴜsᴇʀ ᴡʜᴏ ɪssᴜᴇᴅ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ `
+• /kickme*:* `ᴍᴇɴᴇɴᴅᴀɴɢ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴍᴇɴɢᴇʟᴜᴀʀᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ `
 
-• /banme*:* `ʙᴀɴs ᴛʜᴇ ᴜsᴇʀ ᴡʜᴏ ɪssᴜᴇᴅ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ `
+• /banme*:* `ᴍᴇᴍ-ʙᴀɴɴᴇᴅ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴍᴇɴɢᴇʟᴜᴀʀᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ `
 
 *ᴀᴅᴍɪɴs ᴏɴʟʏ:*
 
-• /ban <userhandle>*:*` ʙᴀɴs ᴀ ᴜsᴇʀ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ `
+• /ban <userhandle>*:*` ʙᴀɴ ᴘᴇɴɢɢᴜɴᴀ ( ᴅᴀʀɪ ᴘᴇʀɪɴᴛᴀʜ ᴀᴛᴀᴜ ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ ) `
 )
-• /sban <ᴜsᴇʀʜᴀɴᴅʟᴇ>*:* `sɪʟᴇɴᴛʟʏ ʙᴀɴ ᴀ ᴜsᴇʀ. ᴅᴇʟᴇᴛᴇs ᴄᴏᴍᴍᴀɴᴅ, ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴅᴏᴇsɴ'ᴛ ʀᴇᴘʟʏ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ)`
+• /sban <ᴜsᴇʀʜᴀɴᴅʟᴇ>*:* `ᴅɪᴀᴍ-ᴅɪᴀᴍ ʙᴀɴ ᴘᴇɴɢɢᴜɴᴀ. ᴍᴇɴɢʜᴀᴘᴜs ᴘᴇʀɪɴᴛᴀʜ, ᴍᴇɴɢʜᴀᴘᴜs ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ ᴅᴀɴ ᴛɪᴅᴀᴋ ᴍᴇᴍʙᴀʟᴀs. ( ᴅᴀʀɪ ᴘᴇʀɪɴᴛᴀʜ ᴀᴛᴀᴜ ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ )`
 
-• /tban <ᴜsᴇʀʜᴀɴᴅʟᴇ> x(m/h/d)*:* `ʙᴀɴs ᴀ ᴜsᴇʀ ғᴏʀ x ᴛɪᴍᴇ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ). ᴍ = ᴍɪɴᴜᴛᴇs, h = ʜᴏᴜʀs, d = ᴅᴀʏs.`
+• /tban <ᴜsᴇʀʜᴀɴᴅʟᴇ> x(m/h/d)*:* `ʙᴀɴ ᴘᴇɴɢɢᴜɴᴀ ᴜɴᴛᴜᴋ x ᴡᴀᴋᴛᴜ. ( ᴅᴀʀɪ ᴘᴇʀɪɴᴛᴀʜ ᴀᴛᴀᴜ ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ ). ᴍ = ᴍɪɴᴜᴛᴇs, h = ʜᴏᴜʀs, d = ᴅᴀʏs.`
 
-• /unban <userhandle>*:* `ᴜɴʙᴀɴs ᴀ ᴜsᴇʀ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ )`
+• /unban <userhandle>*:* `ᴍᴇᴍʙᴇʙᴀsᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ. ( ᴅᴀʀɪ ᴘᴇʀɪɴᴛᴀʜ ᴀᴛᴀᴜ ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ )`
 
-• /kick <userhandle>*:* `ᴋɪᴄᴋs ᴀ ᴜsᴇʀ ᴏᴜᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ, (via ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ)`
+• /kick <userhandle>*:* `ᴍᴇɴᴇɴᴅᴀɴɢ ᴘᴇɴɢɢᴜɴᴀ, ( ᴅᴀʀɪ ᴘᴇʀɪɴᴛᴀʜ ᴀᴛᴀᴜ ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ )`
 
-• /mute <userhandle>*:* `sɪʟᴇɴᴄᴇs ᴀ ᴜsᴇʀ. ᴄᴀɴ ᴀʟsᴏ ʙᴇ ᴜsᴇᴅ ᴀs ᴀ ʀᴇᴘʟʏ, ᴍᴜᴛɪɴɢ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴜsᴇʀ.`
+• /mute <userhandle>*:* `ᴍᴇᴍʙɪsᴜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ. ( ᴅᴀʀɪ ᴘᴇʀɪɴᴛᴀʜ ᴀᴛᴀᴜ ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ )`
 
-• /tmute <userhandle> x(m/h/d)*:* `ᴍᴜᴛᴇs a ᴜsᴇʀᴛ for x ᴛɪᴍᴇ. (ᴠɪᴀ ʜᴀɴᴅʟᴇ, ᴏʀ ʀᴇᴘʟʏ). ᴍ = ᴍɪɴᴜᴛᴇs, h = ʜᴏᴜʀs, d = ᴅᴀʏs `
+• /tmute <userhandle> x(m/h/d)*:* `ᴍᴇᴍʙɪsᴜᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ ᴜɴᴛᴜᴋ x ᴡᴀᴋᴛᴜ. ( ᴅᴀʀɪ ᴘᴇʀɪɴᴛᴀʜ ᴀᴛᴀᴜ ʙᴀʟᴀsᴀɴ ᴘᴇsᴀɴ ). ᴍ = ᴍɪɴᴜᴛᴇs, h = ʜᴏᴜʀs, d = ᴅᴀʏs `
 .
-• /unmute <userhandle>*:* `ᴜɴᴍᴜᴛᴇs ᴀ ~ user. ᴄᴀɴ ᴀʟsᴏ ʙᴇ ᴜsᴇᴅ ᴀs a ʀᴇᴘʟʏ, ᴍᴜᴛɪɴɢ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴜsᴇʀ `
+• /unmute <userhandle>*:* `ᴍᴇᴍʙᴜɴʏɪᴋᴀɴ ᴘᴇɴɢɢᴜɴᴀ `
 .
-• /zombies*:* `sᴇᴀʀᴄʜᴇs ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ `
+• /zombies*:* `ᴍᴇɴᴄᴀʀɪ ᴀᴋᴜɴ ᴛᴇʀʜᴀᴘᴜs `
 
-• /zombies clean*:* `ʀᴇᴍᴏᴠᴇs ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ `
+• /zombies clean*:* `ᴍᴇᴍʙᴜᴀɴɢ ᴀᴋᴜɴ ᴛᴇʀʜᴀᴘᴜs `
 .
-• /abishnoi <chatid> <ᴍsɢ>*:* `ᴍᴀᴋᴇ ᴍᴇ sᴇɴᴅ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀ sᴘᴇᴄɪғɪᴄ ᴄʜᴀᴛ `.
+• /abishnoi <chatid> <ᴍsɢ>*:* ` ᴍᴇᴍʙᴜᴀᴛ sᴀʏᴀ ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ᴋᴇ ᴏʙʀᴏʟᴀɴ ᴛᴇʀᴛᴇɴᴛᴜ `.
 """
 
 __mod_name__ = "𝙱ᴀɴs"
